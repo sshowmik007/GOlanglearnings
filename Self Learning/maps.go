@@ -1,13 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	x := []string{"a", "b", "c", "d"} //[]string - slice of string
-	fmt.Println(x)
-	y := []string{"m", "n", "l", "o"}
-	fmt.Println(y)
+	m := map[string]int{
+		"james":      32,
+		"moneypenny": 27,
+	}
+	fmt.Println(m)
 
-	multidimentionalSlice := [][]string{x, y}
-	fmt.Println(multidimentionalSlice) //multi dimentional
+	fmt.Println(m["james"])
+
+	//asking comma ok idiom
+	//checking v,ok :=
+	//if
+	v, ok := m["sakib"]
+	fmt.Println(v)
+	fmt.Println(ok)
+
+	if v, ok := m["james"]; ok {
+		fmt.Println("this is the if print", v)
+	}
 }
