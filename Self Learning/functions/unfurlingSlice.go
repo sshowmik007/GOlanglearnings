@@ -10,7 +10,7 @@ import (
 
 func main() {
 	xi := []int{2, 3, 4, 5, 6, 7, 8, 9} //unfurling a slice of int
-	x := sum(xi...)
+	x := sum(xi...) //sum is asking for slice of int
 	fmt.Println("The total is", x)
 }
 
